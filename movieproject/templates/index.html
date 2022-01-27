@@ -5,17 +5,23 @@
           {% for i in movie_list %}
           <div class="col-md-3">
               <div class="card">
-  <img src="{{i.img.url}}" class="card-img-top"  alt="Card image cap" height="250">
-  <div class="card-body">
-    <h5 class="card-title">{{i.name}}</h5>
-    <p class="card-text">{{i.price}}</p>
-    <a class="btn btn-primary" href="{% url 'movieapp:detail' i.id %}" >View details</a>
-  </div>
+                    <img src="{{i.img.url}}" class="card-img-top"  alt="Card image cap" height="250">
+                  <div class="card-body">
+                     <h5 class="card-title">{{i.name}}</h5>
+                      <p class="card-text">{{i.price}}</p>
+                      <a class="btn btn-primary" href="{% url 'movieapp:detail' i.id %}" >View details</a>
+                </div>
             </div>
 
           </div>
-          {% endfor %}
+            {% endfor %}
       </div>
+    
+                <div class="container" align="center">
+
+                <a class="btn btn-secondary btn-lg" href="{% url 'movieapp:add_movie' %}">ADD MOVIE</a>
+
+                </div>
   </div>
 
 
